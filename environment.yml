@@ -1,0 +1,12 @@
+name: rima-promoter-fm        # the environment's name; your prefix keeps it distinct from your other projects
+channels:                     # where conda downloads packages from
+  - conda-forge               # a large, community-maintained channel; using one channel avoids version conflicts
+dependencies:                 # the packages to install
+  - python=3.11               # fixes the Python version; 3.11 is well supported by all the ML libraries we'll use
+  - numpy                     # fast arrays of numbers; your k-mer count vectors will be numpy arrays
+  - pandas                    # tables (rows and columns), for looking at the dataset
+  - scikit-learn              # logistic regression, MCC and other metrics (Stages 0 and A)
+  - matplotlib                # plotting, for figures in results/
+  - datasets                  # Hugging Face library to download the benchmark dataset
+  - jupyterlab                # notebooks, for exploration only (the guide's rule)
+  - ipykernel                 # lets Jupyter use this environment as its Python

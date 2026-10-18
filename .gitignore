@@ -1,0 +1,10 @@
+data/*                # ignore everything inside data/ (datasets are large and downloadable; the code that fetches them is what gets committed)
+!data/.gitkeep        # "!" means "except": keep the placeholder so the folder still exists on GitHub
+__pycache__/          # folders Python creates automatically when running code; regenerated every time
+*.pyc                 # compiled Python files, same reason
+.ipynb_checkpoints/   # Jupyter's autosave copies
+*.npy                 # saved numpy arrays; your cached embeddings will be large
+*.pt                  # saved PyTorch models (Phase 2 onwards)
+*.ckpt                # training checkpoints, same reason
+.env                  # files holding passwords or access tokens must never reach GitHub
+.DS_Store             # macOS folder metadata, harmless but noisy
